@@ -8,10 +8,10 @@ import postRoutes from "./routes/postRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
 import { v2 as cloudinary } from "cloudinary";
 import { app, io, server } from "./socket/socket.js";
-// import job from "./cron/cron.js";
+import job from "./cron/cron.js";
 dotenv.config();
 connectDB();
-// job.start(); // adding cors features
+job.start(); // adding crons features( make a get request every 14 minutes)
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
@@ -37,7 +37,6 @@ app.use("/api/messages", messageRoutes);
 //     "dev": "nodemon server.js",
 //     "start": "node server.js"
 //   },
-
 
 // package.json  for deployment
 // "scripts": {
