@@ -37,107 +37,116 @@ export const Sidebar = () => {
       bg={colorMode === "dark" ? "gray.800" : "white"}
       width="16%"
     >
-      <Flex direction="column" alignItems={"center"} justifyContent="center">
-        <Box alignItems="center" mt={"40px"} mb={"50px"}>
-          <Link
-            as={RouterLink}
-            to="/"
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Text
-              fontSize="2xl"
-              fontWeight="bold"
-              fontFamily={"Comic Sans MS, Comic Sans, cursive"}
+      <Flex
+        justifyContent="center"
+        h="750px"
+        maxH="750px"
+        bg={colorMode === "dark" ? "gray.800" : "white"}
+        overflowY="auto"
+        borderRadius={10}
+      >
+        <Flex direction="column" alignItems={"center"} justifyContent="center">
+          <Box alignItems="center" mt={"40px"} mb={"50px"}>
+            <Link
+              as={RouterLink}
+              to="/"
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
             >
-              ChirpySparrow
-            </Text>
-          </Link>
-        </Box>
-        <Flex direction={"column"} alignItems={"flex-start"} gap={10}>
-          <Link
-            as={RouterLink}
-            to="/"
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <AiFillHome size={26}></AiFillHome>
-              <Text fontSize={"lg"}>Home</Text>
-            </Flex>
-          </Link>
-          <Link
-            as={RouterLink}
-            to={"/search"}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <FaSearch size={26} />
-              <Text fontSize={"lg"}>Search</Text>
-            </Flex>
-          </Link>
-          <Link
-            as={RouterLink}
-            to={"/create"}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <Box border="3px solid white" borderRadius={10}>
-                <HiPlus size={23} />
-              </Box>
-              <Text fontSize={"lg"}>Create</Text>
-            </Flex>
-          </Link>
+              <Text
+                fontSize="2xl"
+                fontWeight="bold"
+                fontFamily={"Comic Sans MS, Comic Sans, cursive"}
+              >
+                ChirpySparrow
+              </Text>
+            </Link>
+          </Box>
+          <Flex direction={"column"} alignItems={"flex-start"} gap={10}>
+            <Link
+              as={RouterLink}
+              to="/"
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <AiFillHome size={26}></AiFillHome>
+                <Text fontSize={"lg"}>Home</Text>
+              </Flex>
+            </Link>
+            <Link
+              as={RouterLink}
+              to={"/search"}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <FaSearch size={26} />
+                <Text fontSize={"lg"}>Search</Text>
+              </Flex>
+            </Link>
+            <Link
+              as={RouterLink}
+              to={"/create"}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <Box border="3px solid white" borderRadius={10}>
+                  <HiPlus size={23} />
+                </Box>
+                <Text fontSize={"lg"}>Create</Text>
+              </Flex>
+            </Link>
 
-          <Link
-            as={RouterLink}
-            to={"/chat"}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <BsFillChatQuoteFill size={26} />
-              <Text fontSize={"lg"}>Message</Text>
-            </Flex>
-          </Link>
-          <Link
-            as={RouterLink}
-            to={`/${loggedInUser.username}`}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <RxAvatar size={26}></RxAvatar>
-              <Text fontSize={"lg"}>Profile</Text>
-            </Flex>
-          </Link>
+            <Link
+              as={RouterLink}
+              to={"/chat"}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <BsFillChatQuoteFill size={26} />
+                <Text fontSize={"lg"}>Message</Text>
+              </Flex>
+            </Link>
+            <Link
+              as={RouterLink}
+              to={`/${loggedInUser.username}`}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <RxAvatar size={26}></RxAvatar>
+                <Text fontSize={"lg"}>Profile</Text>
+              </Flex>
+            </Link>
 
-          <Link
-            as={RouterLink}
-            to={"/settings"}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <MdOutlineSettings size={26} />
-              <Text fontSize={"lg"}>Settings</Text>
-            </Flex>
-          </Link>
+            <Link
+              as={RouterLink}
+              to={"/settings"}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <MdOutlineSettings size={26} />
+                <Text fontSize={"lg"}>Settings</Text>
+              </Flex>
+            </Link>
 
-          <Link
-            as={RouterLink}
-            to={"/auth"}
-            onClick={() => logout()}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex gap={4}>
-              <FiLogOut size={26} />
-              <Text fontSize={"lg"}>Logout</Text>
-            </Flex>
-          </Link>
+            <Link
+              as={RouterLink}
+              to={"/auth"}
+              onClick={() => logout()}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Flex gap={4}>
+                <FiLogOut size={26} />
+                <Text fontSize={"lg"}>Logout</Text>
+              </Flex>
+            </Link>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
