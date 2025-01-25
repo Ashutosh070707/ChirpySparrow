@@ -38,6 +38,7 @@ export const Sidebar = () => {
       overflowY="auto" // Add vertical scrollbar if content overflows
       bg={colorMode === "dark" ? "gray.800" : "white"}
       width="16%"
+      pb="5%"
     >
       <Flex direction="column" alignItems={"center"} justifyContent="center">
         <Box alignItems="center" mt={"40px"} mb={"50px"}>
