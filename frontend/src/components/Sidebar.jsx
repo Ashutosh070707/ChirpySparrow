@@ -36,11 +36,13 @@ export const Sidebar = () => {
       height="100vh"
       bg={colorMode === "dark" ? "gray.800" : "white"}
       width="16%"
+      alignItems="flex-start"
     >
       <Flex
         justifyContent="center"
-        h="750px"
-        maxH="750px"
+        alignItems="flex-start"
+        h="800px"
+        maxH="800px"
         bg={colorMode === "dark" ? "gray.800" : "white"}
         overflowY="auto"
         borderRadius={10}
