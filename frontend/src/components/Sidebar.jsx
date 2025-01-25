@@ -37,7 +37,7 @@ export const Sidebar = () => {
       bg={colorMode === "dark" ? "gray.800" : "white"}
       width="16%"
       alignItems="flex-start"
-      justifyContent="center"
+      justifyContent="flex-start"
     >
       <Flex
         justifyContent="center"
@@ -47,11 +47,10 @@ export const Sidebar = () => {
         bg={colorMode === "dark" ? "gray.800" : "white"}
         overflowY="auto"
         borderRadius={10}
-        mt={"2%"}
-        mb={"4%"}
+        mb={"3%"}
       >
         <Flex direction="column" alignItems={"center"} justifyContent="center">
-          <Box alignItems="center">
+          <Box alignItems="center" mt={"40px"} mb={"50px"}>
             <Link
               as={RouterLink}
               to="/"
