@@ -90,7 +90,7 @@ export function UpdateProfilePage() {
                   <Avatar
                     name={loggedInUser.name}
                     src={loggedInUser.profilePic}
-                    size="xl"
+                    size={{ base: "xl", sm: "sm", md: "lg" }}
                     boxShadow={"md"}
                   ></Avatar>
                 )}
@@ -98,7 +98,7 @@ export function UpdateProfilePage() {
                   <Avatar
                     name={loggedInUser.name}
                     src="https://example.com/default-avatar.png"
-                    size="xl"
+                    size={{ base: "xl", sm: "sm", md: "lg" }}
                     boxShadow={"md"}
                   ></Avatar>
                 )}

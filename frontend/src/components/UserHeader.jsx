@@ -37,14 +37,14 @@ export const UserHeader = ({ searchedUser }) => {
               <Avatar
                 name={searchedUser.name}
                 src={searchedUser.profilePic}
-                size="xl"
+                size={{ base: "xl", sm: "sm", md: "lg" }}
               ></Avatar>
             )}
             {!searchedUser.profilePic && (
               <Avatar
                 name={searchedUser.name}
                 src="https://example.com/default-avatar.png"
-                size="xl"
+                size={{ base: "xl", sm: "sm", md: "lg" }}
               ></Avatar>
             )}
           </Box>
