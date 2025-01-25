@@ -65,7 +65,7 @@ export const Sidebar = () => {
             _hover={{ textDecoration: "none" }}
           >
             <Flex gap={4}>
-              <AiFillHome size={{ base: 26, sm: 16, md: 20 }}></AiFillHome>
+              <AiFillHome size={{ base: 15, sm: 16, md: 20 }}></AiFillHome>
               <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>Home</Text>
             </Flex>
           </Link>
@@ -76,7 +76,7 @@ export const Sidebar = () => {
             _hover={{ textDecoration: "none" }}
           >
             <Flex gap={4}>
-              <FaSearch size={{ base: 26, sm: 16, md: 20 }} />
+              <FaSearch size={{ base: 15, sm: 16, md: 20 }} />
               <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>Search</Text>
             </Flex>
           </Link>
@@ -88,7 +88,7 @@ export const Sidebar = () => {
           >
             <Flex gap={4}>
               <Box border="3px solid white" borderRadius={10}>
-                <HiPlus size={{ base: 23, sm: 14, md: 18 }} />
+                <HiPlus size={{ base: 13, sm: 14, md: 18 }} />
               </Box>
               <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>Create</Text>
             </Flex>
@@ -101,8 +101,8 @@ export const Sidebar = () => {
             _hover={{ textDecoration: "none" }}
           >
             <Flex gap={4}>
-              <BsFillChatQuoteFill size={{ base: 26, sm: 16, md: 20 }} />
-              <Text fontSize={"lg"}>Message</Text>
+              <BsFillChatQuoteFill size={{ base: 15, sm: 16, md: 20 }} />
+              <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>Message</Text>
             </Flex>
           </Link>
           <Link
@@ -112,7 +112,7 @@ export const Sidebar = () => {
             _hover={{ textDecoration: "none" }}
           >
             <Flex gap={4}>
-              <RxAvatar size={{ base: 26, sm: 16, md: 20 }}></RxAvatar>
+              <RxAvatar size={{ base: 15, sm: 16, md: 20 }}></RxAvatar>
               <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>Profile</Text>
             </Flex>
           </Link>
@@ -124,7 +124,7 @@ export const Sidebar = () => {
             _hover={{ textDecoration: "none" }}
           >
             <Flex gap={4}>
-              <MdOutlineSettings size={{ base: 26, sm: 16, md: 20 }} />
+              <MdOutlineSettings size={{ base: 15, sm: 16, md: 20 }} />
               <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>
                 Settings
               </Text>
@@ -139,7 +139,7 @@ export const Sidebar = () => {
             _hover={{ textDecoration: "none" }}
           >
             <Flex gap={4}>
-              <FiLogOut size={{ base: 26, sm: 16, md: 20 }} />
+              <FiLogOut size={{ base: 15, sm: 16, md: 20 }} />
               <Text fontSize={{ base: "lg", sm: "sm", md: "xl" }}>Logout</Text>
             </Flex>
           </Link>
