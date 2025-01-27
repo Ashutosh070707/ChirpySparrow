@@ -22,6 +22,7 @@ export const signupUser = async (req, res) => {
       username,
       password: hashedPassword,
       profilePic: "",
+      bio: "",
     });
     await newUser.save();
 
@@ -32,8 +33,8 @@ export const signupUser = async (req, res) => {
         name: newUser.name,
         email: newUser.email,
         username: newUser.username,
-        profilePic: user.profilePic,
-        bio: user.bio,
+        profilePic: newUser.profilePic,
+        bio: newUser.bio,
       });
     } else {
       res.status(400).json({ error: "Invalid user data" });
