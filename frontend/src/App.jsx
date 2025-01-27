@@ -25,10 +25,8 @@ function App() {
     <>
       <Box>
         <Flex direction="row" spacing={4}>
-          <Box w={{ base: "0", sm: "20%", md: "16%" }}>
-            {loggedInUser && <Sidebar />}
-          </Box>
-          <Box w={{ base: "full", sm: "80%", md: "84%" }} alignItems="center">
+          <Box w="16%">{loggedInUser && <Sidebar />}</Box>
+          <Box w="84%" alignItems="center">
             <Routes>
               <Route
                 path="/"
