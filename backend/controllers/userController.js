@@ -21,6 +21,7 @@ export const signupUser = async (req, res) => {
       email,
       username,
       password: hashedPassword,
+      profilePic: "",
     });
     await newUser.save();
 
