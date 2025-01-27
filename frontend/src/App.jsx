@@ -1,5 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { UserPage } from "./pages/UserPage";
 import { PostPage } from "./pages/PostPage";
 import { HomePage } from "./pages/HomePage.jsx";
@@ -19,14 +19,17 @@ import { SearchUserPage } from "./pages/SearchUserPage.jsx";
 
 function App() {
   const loggedInUser = useRecoilValue(loggedInUserAtom);
-  // const { pathname } = useLocation();
 
   return (
     <>
       <Box>
-        <Flex direction="row" spacing={4}>
-          <Box w="16%">{loggedInUser && <Sidebar />}</Box>
-          <Box w="84%" alignItems="center">
+        <Flex direction="row" gap={4}>
+          {loggedInUser && (
+            <Box w="16%">
+              <Sidebar />
+            </Box>
+          )}
+          <Box w={loggedInUser ? "84%" : "100%"} alignItems="center">
             <Routes>
               <Route
                 path="/"
@@ -90,6 +93,7 @@ function App() {
                   loggedInUser ? <FreezeAccount /> : <Navigate to={"/auth"} />
                 }
               ></Route>
+              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </Box>
         </Flex>
