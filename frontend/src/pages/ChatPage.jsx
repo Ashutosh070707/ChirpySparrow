@@ -182,13 +182,7 @@ export const ChatPage = () => {
   };
 
   return (
-    <Flex
-      w="full"
-      h="690px"
-      justifyContent={"center"}
-      alignItems="center"
-      border="1px solid pink"
-    >
+    <Flex w="full" h="690px" justifyContent={"center"} alignItems="center">
       <Flex
         w="70%"
         h="80%"

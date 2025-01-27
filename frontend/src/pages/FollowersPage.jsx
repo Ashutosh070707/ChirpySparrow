@@ -42,7 +42,7 @@ export const FollowersPage = () => {
         </Flex>
       ) : followers.length === 0 ? (
         <Flex w="full" h="100vh" justifyContent="center" alignItems="center">
-          <Text fontSize="2xl">"Follow someone"</Text>
+          <Text fontSize="2xl">"No followers"</Text>
         </Flex>
       ) : (
         <Flex
